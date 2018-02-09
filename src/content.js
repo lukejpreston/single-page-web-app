@@ -1,20 +1,28 @@
 import React from 'react'
 import Markdown from 'react-remarkable'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import {faBook} from '@fortawesome/fontawesome-free-solid'
+import {faQuestionCircle} from '@fortawesome/fontawesome-free-regular'
+import styles from './styles'
 
 const Content = () => <nav className='panel'>
   <p className='panel-heading'>repositories</p>
-  <div className='panel-block'>
-    <div className='tabs is-boxed'>
+  <div className={`panel-tabs ${styles.panelTabs()}`}>
+    <div className={`tabs is-boxed ${styles.contentTabs()}`}>
       <ul>
-        <li className='is-active'>
-          <a>
-            <span className='icon is-small'><i className='fas fa-image' /></span>
+        <li className={`is-active`}>
+          <a className={styles.contentTab()}>
+            <span className='icon is-small'>
+              <FontAwesomeIcon icon={faBook} />
+            </span>
             <span>About</span>
           </a>
         </li>
         <li>
-          <a>
-            <span className='icon is-small'><i className='fas fa-music' /></span>
+          <a className={styles.contentTab()}>
+            <span className='icon is-small'>
+              <FontAwesomeIcon icon={faQuestionCircle} />
+            </span>
             <span>Exercises</span>
           </a>
         </li>
