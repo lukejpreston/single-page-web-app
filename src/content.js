@@ -8,10 +8,10 @@ import {faQuestionCircle} from '@fortawesome/fontawesome-free-regular'
 import styles from './styles'
 
 const ContentTabs = ({about, aboutLink, exercises, exercisesLink, filesLink}) => <div className={`panel-tabs ${styles.panelTabs()}`}>
-  <div className={`tabs is-boxed ${styles.contentTabs()}`}>
+  <div className={`tabs is-boxed ${styles.tabs()}`}>
     <ul>
       <li className={`is-${about}`}>
-        <Link to={aboutLink} className={styles.contentTab()}>
+        <Link to={aboutLink} className={styles.tab()}>
           <span className='icon is-small'>
             <FontAwesomeIcon icon={faBook} />
           </span>
@@ -19,7 +19,7 @@ const ContentTabs = ({about, aboutLink, exercises, exercisesLink, filesLink}) =>
         </Link>
       </li>
       <li className={`is-${exercises}`}>
-        <Link to={exercisesLink} className={styles.contentTab()}>
+        <Link to={exercisesLink} className={styles.tab()}>
           <span className='icon is-small'>
             <FontAwesomeIcon icon={faQuestionCircle} />
           </span>
@@ -27,7 +27,7 @@ const ContentTabs = ({about, aboutLink, exercises, exercisesLink, filesLink}) =>
         </Link>
       </li>
       <li>
-        <a href={filesLink} className={styles.contentTab()} download>
+        <a href={filesLink} className={styles.tab()} download>
           <span className='icon is-small'>
             <FontAwesomeIcon icon={faDownload} />
           </span>
@@ -50,7 +50,7 @@ const Content = ({label, tabs, markdown}) => <nav className='panel'>
   <p className='panel-heading'>{label}</p>
   <ContentTabs {...tabs} />
   <div className='panel-block'>
-    <div className='content'>
+    <div className={`content ${styles.content()}`}>
       <Markdown>{markdown}</Markdown>
     </div>
   </div>

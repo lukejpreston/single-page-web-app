@@ -5,18 +5,22 @@ const styles = StyleSheet.create({
     justifyContent: 'left',
     borderBottom: 'none'
   },
-  contentTabs: {
+  tabs: {
     width: '100%',
     marginLeft: -1
   },
-  contentTab: {
+  tab: {
     borderRadius: 0,
     borderTop: 0
+  },
+  content: {
+    padding: 20
   }
 })
 
 export default {
   panelTabs: () => css(styles.panelTabs),
-  contentTabs: () => css(styles.contentTabs),
-  contentTab: () => css(styles.contentTab)
+  tabs: () => css(styles.tabs),
+  tab: () => css(styles.tab),
+  content: () => css(styles.content)
 }
