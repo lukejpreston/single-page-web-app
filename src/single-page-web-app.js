@@ -4,7 +4,7 @@ import Hero from './hero'
 import Menu from './menu'
 import Content from './content'
 
-const SinglePageWebApp = ({title}) => {
+const SinglePageWebApp = ({title, menu, content}) => {
   return <div>
     <header>
       <Hero title={title} />
@@ -14,10 +14,10 @@ const SinglePageWebApp = ({title}) => {
         <div className='container'>
           <div className='columns'>
             <div className='column is-3'>
-              <Menu />
+              <Menu {...menu} />
             </div>
             <div className='column'>
-              <Content />
+              <Content {...content} />
             </div>
           </div>
         </div>
@@ -27,7 +27,9 @@ const SinglePageWebApp = ({title}) => {
 }
 
 SinglePageWebApp.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  menu: PropTypes.object.isRequired,
+  content: PropTypes.object.isRequired
 }
 
 export default SinglePageWebApp
