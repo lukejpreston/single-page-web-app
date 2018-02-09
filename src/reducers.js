@@ -45,7 +45,8 @@ const defaultContent = {
     about: 'active',
     aboutLink: '/',
     exercises: 'inactive',
-    exercisesLink: '/?exercises'
+    exercisesLink: '/?exercises',
+    filesLink: ''
   },
   markdown: '',
   status: 'fetch'
@@ -62,6 +63,11 @@ const getContent = (pathname, search) => {
 
   content.tabs.aboutLink = pathname
   content.tabs.exercisesLink = pathname + '?exercises'
+
+  let files = '/files' + pathname
+  if (files === '/files/') files = 'files/introduction'
+  files = files + '.zip'
+  content.tabs.filesLink = files
 
   return content
 }

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import Markdown from 'react-remarkable'
 import {Link} from 'react-router-dom'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import {faBook} from '@fortawesome/fontawesome-free-solid'
+import {faBook, faDownload} from '@fortawesome/fontawesome-free-solid'
 import {faQuestionCircle} from '@fortawesome/fontawesome-free-regular'
 import styles from './styles'
 
-const ContentTabs = ({about, aboutLink, exercises, exercisesLink}) => <div className={`panel-tabs ${styles.panelTabs()}`}>
+const ContentTabs = ({about, aboutLink, exercises, exercisesLink, filesLink}) => <div className={`panel-tabs ${styles.panelTabs()}`}>
   <div className={`tabs is-boxed ${styles.contentTabs()}`}>
     <ul>
       <li className={`is-${about}`}>
@@ -26,6 +26,14 @@ const ContentTabs = ({about, aboutLink, exercises, exercisesLink}) => <div class
           <span>Exercises</span>
         </Link>
       </li>
+      <li>
+        <a href={filesLink} className={styles.contentTab()} download>
+          <span className='icon is-small'>
+            <FontAwesomeIcon icon={faDownload} />
+          </span>
+          <span>Files</span>
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -34,7 +42,8 @@ ContentTabs.propTypes = {
   about: PropTypes.string.isRequired,
   aboutLink: PropTypes.string.isRequired,
   exercises: PropTypes.string.isRequired,
-  exercisesLink: PropTypes.string.isRequired
+  exercisesLink: PropTypes.string.isRequired,
+  filesLink: PropTypes.string.isRequired
 }
 
 const Content = ({label, tabs, markdown}) => <nav className='panel'>
