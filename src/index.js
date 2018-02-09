@@ -1,8 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+import {createStore, combineReducers, applyMiddleware} from 'redux'
+import {Provider} from 'react-redux'
+import createHistory from 'history/createBrowserHistory'
+import {Route} from 'react-router'
+import reducers from './reducers'
+import {ConnectedRouter, routerReducer, routerMiddleware} from 'react-router-redux'
+import SinglePageWebApp from './container'
+import 'normalize.css'
+import 'bulma/css/bulma.css'
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+const history = createHistory()
+const middleware = routerMiddleware(history)
+const store = createStore(
+  combineReducers({
+    ...reducers,
+    router: routerReducer
+  }),
+  applyMiddleware(middleware)
+)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <div>
+        <Route path='*' component={SinglePageWebApp} />
+      </div>
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
+)
