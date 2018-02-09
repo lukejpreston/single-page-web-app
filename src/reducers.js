@@ -1,6 +1,9 @@
 import clone from 'clone'
 
 const locationChange = '@@router/LOCATION_CHANGE'
+const fetchingMarkdown = '@@spwa/FETCHING'
+const fetchedMarkdown = '@@spwa/FETCHED'
+const fetchedErrorMarkdown = '@@spwa/FETCHED_ERROR'
 
 const pathnamesToTitles = {
   '/': 'Introduction',
@@ -44,7 +47,8 @@ const defaultContent = {
     exercises: 'inactive',
     exercisesLink: '/?exercises'
   },
-  markdown: 'Fetching, please wait ...'
+  markdown: '',
+  status: 'fetch'
 }
 
 const getContent = (pathname, search) => {
@@ -63,9 +67,9 @@ const getContent = (pathname, search) => {
 }
 
 const spwa = (state, action) => {
-  state.menu = clone(defaultMenu)
-  state.title = ''
-  state.content = clone(defaultContent)
+  state.menu = state.menu || clone(defaultMenu)
+  state.title = state.title || ''
+  state.content = state.content || clone(defaultContent)
 
   if (action.type === locationChange) {
     const pathname = action.payload.pathname
@@ -74,6 +78,19 @@ const spwa = (state, action) => {
     state.menu = getMenu(pathname)
     state.content = getContent(pathname, search)
   }
+
+  if (action.type === fetchingMarkdown) {
+    state.content.status = 'fetching'
+    state.content.markdown = action.payload.markdown
+  }
+
+  if (action.type === fetchedMarkdown) {
+    state.content.status = 'fetched'
+    state.content.markdown = action.payload.markdown
+  }
+
+  if (action.type === fetchedErrorMarkdown) state.content.status = 'fetched-error'
+
   return state
 }
 

@@ -30,6 +30,13 @@ const ContentTabs = ({about, aboutLink, exercises, exercisesLink}) => <div class
   </div>
 </div>
 
+ContentTabs.propTypes = {
+  about: PropTypes.string.isRequired,
+  aboutLink: PropTypes.string.isRequired,
+  exercises: PropTypes.string.isRequired,
+  exercisesLink: PropTypes.string.isRequired
+}
+
 const Content = ({label, tabs, markdown}) => <nav className='panel'>
   <p className='panel-heading'>{label}</p>
   <ContentTabs {...tabs} />
