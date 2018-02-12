@@ -35,7 +35,7 @@ const defaultMenu = {
     }]
   },
   server: {
-    label: 'Server Side',
+    label: 'Server Interactions',
     links: [{
       pathname: '/koa',
       label: 'Koa',

@@ -22,11 +22,11 @@ I am using Ubuntu and have been using Macs for a long time. You should be able t
 
 # Modules
 
-* The basics. How to build a single page web app for the browser. You will learn es6, React, React Router, Redux and Webpack
-* Server interactions. How to spin up a Koa server with security and websockets
-* Desktop application. How to turn your web app into a Desktop application using Electron and how to add Desktop features like file managment
-* Mobile applications. How to turn your web app into a Mobile application using React Native and how to add features such as touch
-* Testing. Unit using Jest and integration using nightmarejs.
+* **The Basics** How to build a single page web app for the browser. You will learn es6, React, React Router, Redux and Webpack
+* **Server Interactions** How to spin up a Koa server with security and websockets
+* **Desktop Application** How to turn your web app into a Desktop application using Electron and how to add Desktop features like file managment
+* **Mobile Applications** How to turn your web app into a Mobile application using React Native and how to add features such as touch
+* **Testing** Unit using Jest and integration using nightmarejs.
 
 # Who are you?
 

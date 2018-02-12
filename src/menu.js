@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
+import styles from './styles'
 
 const MenuLink = ({pathname, active, index, label}) => <li>
   <Link to={pathname} className={`is-${active}`}>
@@ -15,7 +16,7 @@ MenuLink.propTypes = {
   label: PropTypes.string.isRequired
 }
 
-const MenuBlock = ({label, links}) => <div>
+const MenuBlock = ({label, links}) => <div className={styles.menuBlock()}>
   <p className='menu-label'>{label}</p>
   <ul className='menu-list'>
     {links.map((link, index) => <MenuLink key={link.pathname} index={index} {...link} />)}

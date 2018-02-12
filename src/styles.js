@@ -5,6 +5,9 @@ const styles = StyleSheet.create({
     width: 'auto',
     height: 150
   },
+  menuBlock: {
+    marginBottom: 10
+  },
   panelTabs: {
     justifyContent: 'left',
     borderBottom: 'none'
@@ -27,9 +30,10 @@ const styles = StyleSheet.create({
 })
 
 export default {
+  logo: () => css(styles.logo),
+  menuBlock: () => css(styles.menuBlock),
   panelTabs: () => css(styles.panelTabs),
   tabs: () => css(styles.tabs),
   tab: () => css(styles.tab),
-  content: () => css(styles.content),
-  logo: () => css(styles.logo)
+  content: () => css(styles.content)
 }
