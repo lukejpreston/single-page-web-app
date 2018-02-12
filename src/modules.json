@@ -12,7 +12,7 @@
             },
             {
                 "pathname": "/es6",
-                "label": "es6"
+                "label": "ES6"
             },
             {
                 "pathname": "/eslint",
