@@ -27,12 +27,20 @@ MenuBlock.propTypes = {
   links: PropTypes.array.isRequired
 }
 
-const Menu = ({web}) => <aside className='menu'>
+const Menu = ({web, server, desktop, mobile, testing}) => <aside className='menu'>
   <MenuBlock {...web} />
+  <MenuBlock {...server} />
+  <MenuBlock {...desktop} />
+  <MenuBlock {...mobile} />
+  <MenuBlock {...testing} />
 </aside>
 
 Menu.propTypes = {
-  web: PropTypes.object.isRequired
+  web: PropTypes.object.isRequired,
+  server: PropTypes.object.isRequired,
+  desktop: PropTypes.object.isRequired,
+  mobile: PropTypes.object.isRequired,
+  testing: PropTypes.object.isRequired
 }
 
 export default Menu

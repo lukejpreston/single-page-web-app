@@ -7,7 +7,16 @@ const fetchedErrorMarkdown = '@@spwa/FETCHED_ERROR'
 
 const pathnamesToTitles = {
   '/': 'Introduction',
-  '/node': 'Node'
+  '/node': 'Node',
+  '/koa': 'Koa',
+  '/sockets': 'Socket IO',
+  '/passport': 'Passport',
+  '/electron': 'Electron',
+  '/io': 'Node IO',
+  '/react-native': 'React Native',
+  '/jest': 'Jest',
+  '/jest-react': 'Jest React',
+  '/nightmare': 'Nightmare'
 }
 
 const getTitle = pathname => pathnamesToTitles[pathname] || ''
@@ -22,6 +31,58 @@ const defaultMenu = {
     }, {
       pathname: '/node',
       label: 'Node',
+      active: 'inactive'
+    }]
+  },
+  server: {
+    label: 'Server Side',
+    links: [{
+      pathname: '/koa',
+      label: 'Koa',
+      active: 'inactive'
+    }, {
+      pathname: '/sockets',
+      label: 'SocketIO',
+      active: 'inactive'
+    }, {
+      pathname: '/passport',
+      label: 'Passport',
+      active: 'inactive'
+    }]
+  },
+  desktop: {
+    label: 'Desktop Application',
+    links: [{
+      pathname: '/electron',
+      label: 'Electron',
+      active: 'inactive'
+    }, {
+      pathname: '/io',
+      label: 'Node IO',
+      active: 'inactive'
+    }]
+  },
+  mobile: {
+    label: 'Mobile Application',
+    links: [{
+      pathname: '/react-native',
+      label: 'Ract Native',
+      active: 'inactive'
+    }]
+  },
+  testing: {
+    label: 'Testing',
+    links: [{
+      pathname: '/jest',
+      label: 'Jest',
+      active: 'inactive'
+    }, {
+      pathname: '/jest-react',
+      label: 'Jest React',
+      active: 'inactive'
+    }, {
+      pathname: '/nightmare',
+      label: 'Nightmare',
       active: 'inactive'
     }]
   }
@@ -95,7 +156,10 @@ const spwa = (state, action) => {
     state.content.markdown = action.payload.markdown
   }
 
-  if (action.type === fetchedErrorMarkdown) state.content.status = 'fetched-error'
+  if (action.type === fetchedErrorMarkdown) {
+    state.content.status = 'fetched-error'
+    state.content.markdown = action.payload.markdown
+  }
 
   return state
 }

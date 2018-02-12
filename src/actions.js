@@ -14,16 +14,19 @@ export default (dispatch, {match, location, history}) => {
       fetch(file)
         .then(res => res.text())
         .then(markdown => {
-          if (markdown.includes('<!DOCTYPE html>')) throw new Error('could not get ' + file)
-          dispatch({
-            type: '@@spwa/FETCHED',
-            payload: {markdown}
-          })
+          if (markdown.includes('<!DOCTYPE html>')) {
+            throw new Error(`Could not find file \`${file}\``)
+          } else {
+            dispatch({
+              type: '@@spwa/FETCHED',
+              payload: {markdown}
+            })
+          }
         })
         .catch((err) => {
           dispatch({
             type: '@@spwa/FETCHED_ERROR',
-            payload: {err}
+            payload: {markdown: err.message}
           })
         })
     }
