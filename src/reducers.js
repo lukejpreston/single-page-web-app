@@ -1,95 +1,23 @@
 import clone from 'clone'
+import modules from './modules.json'
 
 const locationChange = '@@router/LOCATION_CHANGE'
 const fetchingMarkdown = '@@spwa/FETCHING'
 const fetchedMarkdown = '@@spwa/FETCHED'
 const fetchedErrorMarkdown = '@@spwa/FETCHED_ERROR'
 
-const pathnamesToTitles = {
-  '/': 'Introduction',
-  '/node': 'Node',
-  '/koa': 'Koa',
-  '/sockets': 'Socket IO',
-  '/passport': 'Passport',
-  '/electron': 'Electron',
-  '/io': 'Node IO',
-  '/react-native': 'React Native',
-  '/jest': 'Jest',
-  '/jest-react': 'Jest React',
-  '/nightmare': 'Nightmare'
-}
-
-const getTitle = pathname => pathnamesToTitles[pathname] || ''
-
-const defaultMenu = {
-  web: {
-    label: 'Web Application',
-    links: [{
-      pathname: '/',
-      label: 'Introduction',
-      active: 'inactive'
-    }, {
-      pathname: '/node',
-      label: 'Node',
-      active: 'inactive'
-    }]
-  },
-  server: {
-    label: 'Server Interactions',
-    links: [{
-      pathname: '/koa',
-      label: 'Koa',
-      active: 'inactive'
-    }, {
-      pathname: '/sockets',
-      label: 'SocketIO',
-      active: 'inactive'
-    }, {
-      pathname: '/passport',
-      label: 'Passport',
-      active: 'inactive'
-    }]
-  },
-  desktop: {
-    label: 'Desktop Application',
-    links: [{
-      pathname: '/electron',
-      label: 'Electron',
-      active: 'inactive'
-    }, {
-      pathname: '/io',
-      label: 'Node IO',
-      active: 'inactive'
-    }]
-  },
-  mobile: {
-    label: 'Mobile Application',
-    links: [{
-      pathname: '/react-native',
-      label: 'Ract Native',
-      active: 'inactive'
-    }]
-  },
-  testing: {
-    label: 'Testing',
-    links: [{
-      pathname: '/jest',
-      label: 'Jest',
-      active: 'inactive'
-    }, {
-      pathname: '/jest-react',
-      label: 'Jest React',
-      active: 'inactive'
-    }, {
-      pathname: '/nightmare',
-      label: 'Nightmare',
-      active: 'inactive'
-    }]
-  }
+const getTitle = pathname => {
+  let title = ''
+  Object.keys(modules).forEach(key => {
+    modules[key].links.forEach(link => {
+      if (link.pathname === pathname) title = link.label
+    })
+  })
+  return title
 }
 
 const getMenu = pathname => {
-  const menu = clone(defaultMenu)
+  const menu = clone(modules)
   Object.keys(menu).forEach(key => {
     const links = menu[key].links
     links.forEach(link => {
@@ -134,7 +62,7 @@ const getContent = (pathname, search) => {
 }
 
 const spwa = (state, action) => {
-  state.menu = state.menu || clone(defaultMenu)
+  state.menu = state.menu || clone(modules)
   state.title = state.title || ''
   state.content = state.content || clone(defaultContent)
 
@@ -146,20 +74,11 @@ const spwa = (state, action) => {
     state.content = getContent(pathname, search)
   }
 
-  if (action.type === fetchingMarkdown) {
-    state.content.status = 'fetching'
-    state.content.markdown = action.payload.markdown
-  }
+  if (action.type.includes('@@spwa/FETCH')) state.content.markdown = action.payload.markdown
 
-  if (action.type === fetchedMarkdown) {
-    state.content.status = 'fetched'
-    state.content.markdown = action.payload.markdown
-  }
-
-  if (action.type === fetchedErrorMarkdown) {
-    state.content.status = 'fetched-error'
-    state.content.markdown = action.payload.markdown
-  }
+  if (action.type === fetchingMarkdown) state.content.status = 'fetching'
+  if (action.type === fetchedMarkdown) state.content.status = 'fetched'
+  if (action.type === fetchedErrorMarkdown) state.content.status = 'fetched-error'
 
   return state
 }

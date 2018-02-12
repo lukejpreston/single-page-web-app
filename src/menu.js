@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styles from './styles'
 
-const MenuLink = ({pathname, active, index, label}) => <li>
+const MenuLink = ({pathname, active, label}) => <li>
   <Link to={pathname} className={`is-${active}`}>
     <span>{label}</span>
   </Link>
@@ -12,7 +12,6 @@ const MenuLink = ({pathname, active, index, label}) => <li>
 MenuLink.propTypes = {
   pathname: PropTypes.string.isRequired,
   active: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired
 }
 

@@ -1,0 +1,71 @@
+{
+    "web": {
+        "label": "Web Application",
+        "links": [
+            {
+                "pathname": "/",
+                "label": "Introduction"
+            },
+            {
+                "pathname": "/node",
+                "label": "Node"
+            }
+        ]
+    },
+    "server": {
+        "label": "Server Interactions",
+        "links": [
+            {
+                "pathname": "/koa",
+                "label": "Koa"
+            },
+            {
+                "pathname": "/sockets",
+                "label": "SocketIO"
+            },
+            {
+                "pathname": "/passport",
+                "label": "Passport"
+            }
+        ]
+    },
+    "desktop": {
+        "label": "Desktop Application",
+        "links": [
+            {
+                "pathname": "/electron",
+                "label": "Electron"
+            },
+            {
+                "pathname": "/io",
+                "label": "Node IO"
+            }
+        ]
+    },
+    "mobile": {
+        "label": "Mobile Application",
+        "links": [
+            {
+                "pathname": "/react-native",
+                "label": "Ract Native"
+            }
+        ]
+    },
+    "testing": {
+        "label": "Testing",
+        "links": [
+            {
+                "pathname": "/jest",
+                "label": "Jest"
+            },
+            {
+                "pathname": "/jest-react",
+                "label": "Jest React"
+            },
+            {
+                "pathname": "/nightmare",
+                "label": "Nightmare"
+            }
+        ]
+    }
+}
