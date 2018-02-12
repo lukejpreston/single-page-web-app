@@ -1,27 +1,54 @@
 import React from 'react'
 import styles from './styles'
 
-const Logo = () => <svg className={styles.logo()} width='134' height='61' viewBox='0 0 134 61' version='1.1' >
-  <title>Group</title>
+const Logo = () => <svg className={styles.logo()} width='138' height='64' viewBox='0 0 138 64' version='1.1' xmlns='http://www.w3.org/2000/svg' >
+  <title>Group 2.1</title>
   <desc>Created using Figma</desc>
-  <g id='Canvas' transform='translate(922 513)'>
-    <g id='Group'>
-      <g id='Rectangle'>
-        <use xlinkHref='#path0_fill' transform='translate(-922 -513)' fill='#2F80ED' />
+  <g id='Canvas' transform='translate(912 507)'>
+    <g id='Group 2.1'>
+      <g id='Rectangle' filter='url(#filter0_d)'>
+        <use xlinkHref='#path0_fill' transform='translate(-908 -505)' fill='#2F80ED' />
       </g>
-      <g id='Rectangle 3'>
-        <use xlinkHref='#path1_fill' transform='translate(-861 -503)' fill='#00A3FF' />
+      <g id='Rectangle 3' filter='url(#filter1_d)'>
+        <use xlinkHref='#path1_fill' transform='translate(-847 -495)' fill='#00A3FF' />
       </g>
-      <g id='Rectangle 2'>
-        <use xlinkHref='#path2_fill' transform='translate(-818 -493)' fill='#56CCF2' />
+      <g id='Rectangle 2' filter='url(#filter2_d)'>
+        <use xlinkHref='#path2_fill' transform='translate(-804 -485)' fill='#56CCF2' />
       </g>
-      <g id='SPWA' filter='url(#filter0_d)'>
-        <use xlinkHref='#path3_fill' transform='translate(-913 -491)' fill='#F2F2F2' />
+      <g id='SPWA' filter='url(#filter3_d)'>
+        <use xlinkHref='#path3_fill' transform='translate(-899 -483)' fill='#F2F2F2' />
       </g>
     </g>
   </g>
   <defs>
-    <filter id='filter0_d' filterUnits='userSpaceOnUse' x='-917' y='-483' width='126' height='31' colorInterpolationFilters='sRGB'>
+    <filter id='filter0_d' filterUnits='userSpaceOnUse' x='-912' y='-507' width='108' height='64' colorInterpolationFilters='sRGB'>
+      <feFlood floodOpacity='0' result='BackgroundImageFix' />
+      <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0' />
+      <feOffset dx='-2' dy='0' />
+      <feGaussianBlur stdDeviation='1' />
+      <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+      <feBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow' />
+      <feBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape' />
+    </filter>
+    <filter id='filter1_d' filterUnits='userSpaceOnUse' x='-851' y='-497' width='63' height='54' colorInterpolationFilters='sRGB'>
+      <feFlood floodOpacity='0' result='BackgroundImageFix' />
+      <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0' />
+      <feOffset dx='-2' dy='0' />
+      <feGaussianBlur stdDeviation='1' />
+      <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+      <feBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow' />
+      <feBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape' />
+    </filter>
+    <filter id='filter2_d' filterUnits='userSpaceOnUse' x='-808' y='-487' width='35' height='44' colorInterpolationFilters='sRGB'>
+      <feFlood floodOpacity='0' result='BackgroundImageFix' />
+      <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0' />
+      <feOffset dx='-2' dy='0' />
+      <feGaussianBlur stdDeviation='1' />
+      <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+      <feBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow' />
+      <feBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape' />
+    </filter>
+    <filter id='filter3_d' filterUnits='userSpaceOnUse' x='-903' y='-475' width='126' height='31' colorInterpolationFilters='sRGB'>
       <feFlood floodOpacity='0' result='BackgroundImageFix' />
       <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0' />
       <feOffset dx='-2' dy='2' />
