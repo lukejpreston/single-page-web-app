@@ -5,7 +5,7 @@ import styles from './styles'
 
 const MenuLink = ({pathname, active, index, label}) => <li>
   <Link to={pathname} className={`is-${active}`}>
-    <span><b>{index}</b> {label}</span>
+    <span>{label}</span>
   </Link>
 </li>
 
@@ -19,7 +19,7 @@ MenuLink.propTypes = {
 const MenuBlock = ({label, links}) => <div className={styles.menuBlock()}>
   <p className='menu-label'>{label}</p>
   <ul className='menu-list'>
-    {links.map((link, index) => <MenuLink key={link.pathname} index={index} {...link} />)}
+    {links.map((link, index) => <MenuLink key={link.pathname} {...link} />)}
   </ul>
 </div>
 
