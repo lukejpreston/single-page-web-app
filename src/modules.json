@@ -9,6 +9,62 @@
             {
                 "pathname": "/node",
                 "label": "Node"
+            },
+            {
+                "pathname": "/es6",
+                "label": "es6"
+            },
+            {
+                "pathname": "/eslint",
+                "label": "Eslint"
+            },
+            {
+                "pathname": "/webpack-js",
+                "label": "Webpack JS"
+            },
+            {
+                "pathname": "/html",
+                "label": "HTML"
+            },
+            {
+                "pathname": "/webpack-html",
+                "label": "Webpack HTML"
+            },
+            {
+                "pathname": "/css",
+                "label": "Webpack CSS"
+            },
+            {
+                "pathname": "/post-css",
+                "label": "Post CSS"
+            },
+            {
+                "pathname": "/webpack-post-css",
+                "label": "Webpack Post CSS"
+            },
+            {
+                "pathname": "/react",
+                "label": "React"
+            },
+            {
+                "pathname": "/webpack-babel",
+                "label": "Webpack Babel"
+            },
+            {
+                "pathname": "/aphrodite",
+                "label": "Aphrodite"
+            },
+            {
+                "pathname": "/react-router",
+                "label": "React Router"
+            },
+            {
+                "pathname": "/redux",
+                "label": "Redux"
+            },
+            {
+                "pathname": "/react-router-redux",
+                "label": "React Router Redux"
             }
         ]
     },
@@ -65,6 +121,23 @@
             {
                 "pathname": "/nightmare",
                 "label": "Nightmare"
+            }
+        ]
+    },
+    "additional": {
+        "label": "Aditional",
+        "links": [
+            {
+                "pathname": "/vscode",
+                "label": "VSCode"
+            },
+            {
+                "pathname": "/atom",
+                "label": "Atom"
+            },
+            {
+                "pathname": "/counter-app",
+                "label": "Counter App"
             }
         ]
     }
