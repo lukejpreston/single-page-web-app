@@ -3,6 +3,7 @@ const fs = require('fs')
 const archiver = require('archiver')
 
 const zip = (folder) => {
+  console.log('zipping:', folder)
   const zipName = path.resolve(process.cwd(), `public/files/${folder}.zip`)
   const output = fs.createWriteStream(zipName)
 
@@ -36,4 +37,4 @@ const zip = (folder) => {
   archive.finalize()
 }
 
-zip('introduction')
+fs.readdirSync(path.resolve(process.cwd(), 'src/files')).forEach(zip)
