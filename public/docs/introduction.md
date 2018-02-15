@@ -2,34 +2,88 @@
 
 Welcome to the Single Page Web App training
 
-This introduction is to let you know what is in this training material and what you will end up doing should you follow from start to finish
+# What is a single page web app?
 
-# Training Layout
+A single page web app is a website which has a single page. It can also be built into a mobile or desktop application without having to add much (if any) extra code.
 
-Each module consists of 3 sections
+The important features:
+* responsive
+* quick
+* clean user interface
+* accessible
+* secure
+* corss-platform
+* resilient
+* tested
+* maintainable
+* connected
 
-`About` which gives you information about the subject and typically useful links for more information
+Thanks to the JavaScript community this is now not as difficult as you would have thought. Something which would have taken teams of developers, testers, and designers over a long period of time can be accomplished by an individual over a much shorter space of time.
 
-`Exercises` run these in order until satisfied
+If you follow this training from start to finish you will have made a responsive web/mobile/desktop application, you will be able to integrate these applications with social media as well as connect them to other people using the same application.
 
-`Files` a zip of files needed for exercises
 
-You do not need to follow from start to finish. Each module is independent of the previous module other than it relies on you having the knowledge from the previous modules e.g. you know what node is and have it installed before you start the es6 module
+# The training
 
-You need to know basic `HTML`, `CSS`, and `JavaScript`. If you can complete the exercise for the introduction then you will have no problem completing the course
+You do not need to start from the beginning and work through to the end. Each module is independent of the previous module. The only assumption that model makes is you know everything from the previous modules.
 
-I am using Ubuntu and have been using Macs for a long time. You should be able to do this course on a Windows machine and if you wish to contact me directly you should raise an issue on GitHub [here](https://github.com/lukejpreston/single-page-web-app)
+Broken down into
 
-# Modules
+* **Basics**
+    * bulma
+    * webpack
+    * react
+    * redux
+    * react router
+* **Server**
+    * koa
+    * web sockets
+    * passport
+    * lokijs
+* **Desktop**
+    * electron
+* **Mobile**
+    * react native
+* **Testing**
+    * jest
+    * nightmare
 
-* **The Basics** How to build a single page web app for the browser. You will learn es6, React, React Router, Redux and Webpack
-* **Server Interactions** How to spin up a Koa server with security and websockets
-* **Desktop Application** How to turn your web app into a Desktop application using Electron and how to add Desktop features like file managment
-* **Mobile Applications** How to turn your web app into a Mobile application using React Native and how to add features such as touch
-* **Testing** Unit using Jest and integration using nightmarejs.
+You will also be able to put all your new skills together to create an all inspiring `Counter App`
 
-# Who are you?
+Each module has 3 parts `About`, `Exercises`, and `Files`
 
-My name is Luke. I attained a degree in Mathematics in 2011. After which I became an IT Consultant for a company called FDM and where I got was a 2 year contract for UBS focusing in Java. After which I went to work at the BBC for 3 years, there I started as a developer working on iPlayer on TV for 2 years, I spent 6 months in R&D and then my last 6 months working on the web, Sport, News, Music primarly. I now work for CEH as an Applications Developer helping Scientists visualise and store data.
+`About` has all the information about the module
 
-I created this course whilst I worked for R&D because I had been writing all my stuff using React. When it came time to do a hand over I realised that few people knew react or es6 so I ran a quick 1 hour course. This turned into a 1 day course which I ran 3 times whilst at the BBC and before I left stated to turn it into somethnig for CS degrees. Unfortunatly I never got the chance to do finish it so instead I have dumped my brain into GitHub.
+`Exercises` are a numbered list of exercies which you can complete using everything int he `About` section
+
+`Files` is a zip of all the files you need to do the course
+
+# What you need to know before starting
+
+You need to know basic HTML, CSS, and JavaScript. Go comeplte the Introduction Exercises
+
+# What is not covered
+
+Anything which costs money: How you get apps into an app store. How to set up a public facing server, e.g. AWS
+
+# Caveats
+
+The training is a starting point only.
+
+It does not compare libraries and techniques. It is 100% biased to what I like with my experience since 2011
+
+# Examples
+
+### Web Applications
+
+Xunit Viewer
+
+Blank String
+
+### Desktop Applications
+
+Blank String Soundboard
+
+### Mobile Applications
+
+Blank String Dice

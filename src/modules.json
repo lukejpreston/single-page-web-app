@@ -82,6 +82,10 @@
             {
                 "pathname": "/passport",
                 "label": "Passport"
+            },
+            {
+                "pathname": "/lokijs",
+                "label": "LokiJS"
             }
         ]
     },

@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './styles'
 
-const Logo = () => <svg className={styles.logo()} width='138' height='64' viewBox='0 0 138 64' version='1.1' xmlns='http://www.w3.org/2000/svg' >
-  <title>Group 2.1</title>
+const Logo = () => <svg className={styles.logo()} width='138' height='64' viewBox='0 0 138 64'>
+  <title>Single Page Web App</title>
   <desc>Created using Figma</desc>
   <g id='Canvas' transform='translate(912 507)'>
     <g id='Group 2.1'>

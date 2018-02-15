@@ -1,0 +1,42 @@
+<style>
+    .container {
+        margin: 20px;
+    }
+
+    .container button {
+        transition: background-color 0.2s;
+        background-color: slateblue;
+        color: #fff;
+        font-size: 22px;
+        padding: 5px;
+        border: solid 1px #333;
+        margin: 5px;
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 3px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container button:hover {
+        cursor: pointer;
+    }
+
+    .container button:active {
+        background-color: darkslateblue;
+    }
+
+    .container .message {
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+</style>
+<div class="container">
+    <p class="message" id="message">The Default Message</p>
+    <button onclick="onClick()">Click Me</button>
+</div>
+<script>
+    function onClick() {
+        document.getElementById('message').innerHTML = 'After the click the time will be ... ' + new Date().getTime()
+    }
+</script>
