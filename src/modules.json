@@ -31,7 +31,7 @@
                 "label": "Webpack HTML"
             },
             {
-                "pathname": "/css",
+                "pathname": "/webpack-css",
                 "label": "Webpack CSS"
             },
             {
