@@ -51,6 +51,10 @@
                 "label": "Webpack Babel"
             },
             {
+                "pathname": "/bulma",
+                "label": "Bulma"
+            },
+            {
                 "pathname": "/aphrodite",
                 "label": "Aphrodite"
             },
