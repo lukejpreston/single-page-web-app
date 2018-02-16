@@ -37,4 +37,7 @@ const zip = (folder) => {
   archive.finalize()
 }
 
+const publicFiles = path.resolve(process.cwd(), `public/files`)
+if (!fs.existsSync(publicFiles)) fs.mkdirSync(publicFiles)
+
 fs.readdirSync(path.resolve(process.cwd(), 'src/files')).forEach(zip)
