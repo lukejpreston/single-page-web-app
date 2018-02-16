@@ -1,6 +1,7 @@
 function createOneHundred () {
   var oneHundred = 100
   for (var i = 0; i < 10; i++) {
+    // eslint-disable-next-line
     var oneHundred = i * i
   }
   var toReturn = {
