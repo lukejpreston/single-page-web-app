@@ -29,7 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "zip": "node src/zipper.js"
+    "zip": "node src/zipper.js",
+    "predeploy": "npm run zip && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
