@@ -1,11 +1,9 @@
+import mapUrl from './map-url'
+
 export default (dispatch, {match, location, history}) => {
   return {
     fetchMarkdown: () => {
-      let file = `/docs${location.pathname}`
-      if (file === '/docs/') file = '/docs/introduction'
-      if (location.search.includes('exercises')) file += '-exercises'
-      file += '.md'
-
+      const file = mapUrl.file(location.pathname, location.search, 'docs', '.md')
       dispatch({
         type: '@@spwa/FETCHING',
         payload: {markdown: 'Fetching, please wait ...'}

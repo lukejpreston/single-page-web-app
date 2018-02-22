@@ -1,5 +1,13 @@
 import clone from 'clone'
 import modules from './modules.json'
+import mapUrl from './map-url'
+
+Object.keys(modules).forEach(key => {
+  const module = modules[key]
+  module.links.forEach(link => {
+    link.pathname = mapUrl.absolute(link.pathname)
+  })
+})
 
 const locationChange = '@@router/LOCATION_CHANGE'
 const fetchingMarkdown = '@@spwa/FETCHING'
@@ -32,9 +40,9 @@ const defaultContent = {
   label: 'Introduction',
   tabs: {
     about: 'active',
-    aboutLink: '/',
+    aboutLink: mapUrl.absolute('/'),
     exercises: 'inactive',
-    exercisesLink: '/?exercises',
+    exercisesLink: mapUrl.absolute('/?exercises'),
     filesLink: ''
   },
   markdown: '',
@@ -50,13 +58,10 @@ const getContent = (pathname, search) => {
     content.tabs.exercises = 'active'
   }
 
-  content.tabs.aboutLink = pathname
-  content.tabs.exercisesLink = pathname + '?exercises'
+  content.tabs.aboutLink = mapUrl.absolute(pathname)
+  content.tabs.exercisesLink = mapUrl.absolute(`${pathname}`) + '?exercises'
 
-  let files = '/files' + pathname
-  if (files === '/files/') files = 'files/introduction'
-  files = files + '.zip'
-  content.tabs.filesLink = files
+  content.tabs.filesLink = mapUrl.file(pathname, '', 'files', '.zip')
 
   return content
 }
