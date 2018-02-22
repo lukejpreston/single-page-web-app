@@ -90,6 +90,10 @@
             {
                 "pathname": "/lokijs",
                 "label": "LokiJS"
+            },
+            {
+                "pathname": "/graphql",
+                "label": "Graph QL"
             }
         ]
     },
