@@ -9,10 +9,11 @@ export default {
   },
   file (pathname, search, name, extenstion) {
     const folder = `/${name}/`
-    let files = this.absolute(pathname).replace(this.absolute('/'), folder)
-    if (files === folder) files = `${folder}introduction`
-    if (search.includes('exercises')) files += '-exercises'
-    const file = this.absolute(`${files}${extenstion}`)
-    return file.replace(`/${extenstion}`, extenstion)
+    let file = this.absolute(pathname).replace(this.absolute('/'), folder)
+    if (file === folder) file = `${folder}introduction`
+    file = this.absolute(`${file}${extenstion}`)
+    file = file.replace(`/${extenstion}`, extenstion)
+    if (search.includes('exercises')) file = file.replace(extenstion, `-exercises${extenstion}`)
+    return file
   }
 }

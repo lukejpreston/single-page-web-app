@@ -40,6 +40,10 @@ describe('file', () => {
   })
 
   test('handles trailing slashes', () => {
-    expect(mapUrl.file('/single-page-web-app/pathname/', '', 'folder-name', '.ext')).toBe('/single-page-web-app/folder-name/pathname.ext')
+    expect(mapUrl.file('/pathname/', '', 'folder-name', '.ext')).toBe('/single-page-web-app/folder-name/pathname.ext')
+  })
+
+  test('handles trailing slashes with exercises', () => {
+    expect(mapUrl.file('/pathname/', '?exercises', 'folder-name', '.ext')).toBe('/single-page-web-app/folder-name/pathname-exercises.ext')
   })
 })
