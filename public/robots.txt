@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-SITEMAP: http://lukejpreston.github.io/single-page-web-app/sitemap.txt
+SITEMAP: https://single-page-web-app.js.org/sitemap.txt

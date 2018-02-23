@@ -10,6 +10,6 @@ Object.keys(modules).forEach(key => {
   })
 })
 
-const sitemap = links.map(link => `https://lukejpreston.github.io/single-page-web-app${link}`).join('\n')
+const sitemap = links.map(link => `https://single-page-web-app.js.org/${link}`).join('\n')
 const sitemapFilename = path.resolve(process.cwd(), 'public/sitemap.txt')
 fs.writeFileSync(sitemapFilename, sitemap)
