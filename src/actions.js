@@ -3,6 +3,7 @@ import mapUrl from './map-url'
 export default (dispatch, {match, location, history}) => {
   return {
     fetchMarkdown: () => {
+      console.log(location.pathname)
       const file = mapUrl.file(location.pathname, location.search, 'docs', '.md')
       dispatch({
         type: '@@spwa/FETCHING',

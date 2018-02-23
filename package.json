@@ -32,7 +32,8 @@
     "eject": "react-scripts eject",
     "zip": "node src/zipper.js",
     "sitemap": "node src/sitemap.js",
-    "predeploy": "npm run zip && npm run sitemap && npm run build",
+    "generate-pages": "node src/generate-pages.js",
+    "predeploy": "npm run zip && npm run sitemap && npm run build && npm run generate-pages",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
