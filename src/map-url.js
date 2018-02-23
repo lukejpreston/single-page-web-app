@@ -1,6 +1,6 @@
 export default {
   absolute (value) {
-    return value
+    return value || '/'
   },
   file (pathname, search, name, extenstion) {
     const folder = `/${name}/`

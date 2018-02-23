@@ -40,7 +40,7 @@ const getMenu = pathname => {
     const links = menu[key].links
     links.forEach(link => {
       link.active = 'inactive'
-      if (link.pathname === pathname) link.active = 'active'
+      if (link.pathname === pathname || link.pathname === pathname + '/') link.active = 'active'
     })
   })
   return menu
