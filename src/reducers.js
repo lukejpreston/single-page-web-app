@@ -82,7 +82,9 @@ const spwa = (state, action) => {
   state.content = state.content || clone(defaultContent)
 
   if (action.type === locationChange) {
-    const pathname = action.payload.pathname
+    let pathname = action.payload.pathname
+    if (pathname !== '/' && pathname.endsWith('/')) pathname = pathname.slice(0, pathname.length - 1)
+
     const search = action.payload.search
     state.title = getTitle(pathname)
     state.description = getDescription(pathname)
