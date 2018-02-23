@@ -11,7 +11,7 @@ export default (dispatch, {match, location, history}) => {
 
       fetch(file)
         .then(res => {
-          if (!res.ok) throw Error(res.statusText)
+          if (!res.ok) throw new Error(`Could not find file \`${file}\``)
           return res
         })
         .then(res => res.text())
