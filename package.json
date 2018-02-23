@@ -2,7 +2,7 @@
   "name": "single-page-web-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lukejpreston.github.io/single-page-web-app",
+  "homepage": "https://single-page-web-app.js.org/",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3",
     "@fortawesome/fontawesome-free-regular": "^5.0.6",
