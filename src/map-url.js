@@ -2,6 +2,7 @@ const isDev = process.env.NODE_ENV === 'development'
 
 export default {
   absolute (value) {
+    value = value || '/'
     if (isDev) return value
     if (!value.startsWith('/single-page-web-app')) return `/single-page-web-app${value}`
     return value
@@ -11,6 +12,7 @@ export default {
     let files = this.absolute(pathname).replace(this.absolute('/'), folder)
     if (files === folder) files = `${folder}introduction`
     if (search.includes('exercises')) files += '-exercises'
-    return this.absolute(`${files}${extenstion}`)
+    const file = this.absolute(`${files}${extenstion}`)
+    return file.replace(`/${extenstion}`, extenstion)
   }
 }
