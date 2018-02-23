@@ -5,7 +5,7 @@
             {
                 "pathname": "/",
                 "label": "Introduction",
-                "description": "A step by step guide to create a modern web/modile/desktop application"
+                "description": "A step by step guide to create a modern web/mobile/desktop application"
             },
             {
                 "pathname": "/node",

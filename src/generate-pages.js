@@ -16,7 +16,7 @@ Object.keys(modules).forEach(key => {
 
     const output = mustache.render(template, {
       title: `Single Page Web App${title}`,
-      description: link.description || 'A step by step guide to create a modern web/modile/desktop application'
+      description: link.description || 'A step by step guide to create a modern web/mobile/desktop application'
     })
 
     const dir = path.join(build, link.pathname)
