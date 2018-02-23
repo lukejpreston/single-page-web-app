@@ -5,7 +5,9 @@ import Logo from './logo'
 const Hero = ({title, description}) => <section className='hero is-info'>
   <div className='hero-body'>
     <div className='container'>
-      <Logo />
+      <figure className='image is-128x128'>
+        <Logo />
+      </figure>
       <h1 className='title'>
         Single Page Web App
       </h1>

@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite'
 const styles = StyleSheet.create({
   logo: {
     width: 'auto',
-    height: 150
+    height: '100%'
   },
   menuBlock: {
     marginBottom: 10
