@@ -10,6 +10,10 @@ export default (dispatch, {match, location, history}) => {
       })
 
       fetch(file)
+        .then(res => {
+          if (!res.ok) throw Error(res.statusText)
+          return res
+        })
         .then(res => res.text())
         .then(markdown => {
           if (markdown.includes('<!DOCTYPE html>')) {
