@@ -24,7 +24,7 @@ class SinglePageWebApp extends Component {
           <div className='container'>
             <div className='columns'>
               <div className='column is-3'>
-                <Menu {...this.props.menu} />
+                <Menu {...this.props.menu} selectModule={this.props.selectModule} selected={this.props.selected} />
               </div>
               <div className='column'>
                 <Content {...this.props.content} />
@@ -38,10 +38,12 @@ class SinglePageWebApp extends Component {
 }
 SinglePageWebApp.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   menu: PropTypes.object.isRequired,
+  selected: PropTypes.string.isRequired,
   content: PropTypes.object.isRequired,
-  fetchMarkdown: PropTypes.func.isRequired
+  fetchMarkdown: PropTypes.func.isRequired,
+  selectModule: PropTypes.func.isRequired
 }
 
 export default SinglePageWebApp

@@ -17,7 +17,7 @@ const Hero = ({title, description}) => <section className='hero is-info'>
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string
 }
 
 export default Hero

@@ -88,6 +88,7 @@ const spwa = (state, action) => {
     state.description = getDescription(pathname)
     state.menu = getMenu(pathname)
     state.content = getContent(pathname, search)
+    state.selected = pathname
   }
 
   if (action.type.includes('@@spwa/FETCH')) state.content.markdown = action.payload.markdown
