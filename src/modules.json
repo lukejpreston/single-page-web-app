@@ -4,7 +4,8 @@
         "links": [
             {
                 "pathname": "/",
-                "label": "Introduction"
+                "label": "Introduction",
+                "description": "A step by step guide to create a modern web/modile/desktop application"
             },
             {
                 "pathname": "/node",

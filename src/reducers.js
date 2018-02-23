@@ -24,6 +24,16 @@ const getTitle = pathname => {
   return title
 }
 
+const getDescription = pathname => {
+  let description = ''
+  Object.keys(modules).forEach(key => {
+    modules[key].links.forEach(link => {
+      if (link.pathname === pathname) description = link.description
+    })
+  })
+  return description
+}
+
 const getMenu = pathname => {
   const menu = clone(modules)
   Object.keys(menu).forEach(key => {
@@ -75,6 +85,7 @@ const spwa = (state, action) => {
     const pathname = action.payload.pathname
     const search = action.payload.search
     state.title = getTitle(pathname)
+    state.description = getDescription(pathname)
     state.menu = getMenu(pathname)
     state.content = getContent(pathname, search)
   }

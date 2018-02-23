@@ -17,7 +17,7 @@ class SinglePageWebApp extends Component {
   render () {
     return <div>
       <header>
-        <Hero title={this.props.title} />
+        <Hero title={this.props.title} description={this.props.description} />
       </header>
       <main>
         <section className='section'>
@@ -38,6 +38,7 @@ class SinglePageWebApp extends Component {
 }
 SinglePageWebApp.propTypes = {
   title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   menu: PropTypes.object.isRequired,
   content: PropTypes.object.isRequired,
   fetchMarkdown: PropTypes.func.isRequired
