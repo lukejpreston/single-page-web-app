@@ -145,10 +145,6 @@
                 "label": "VSCode"
             },
             {
-                "pathname": "/atom",
-                "label": "Atom"
-            },
-            {
                 "pathname": "/counter-app",
                 "label": "Counter App"
             }
