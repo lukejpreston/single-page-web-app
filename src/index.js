@@ -9,6 +9,7 @@ import {ConnectedRouter, routerReducer, routerMiddleware} from 'react-router-red
 import SinglePageWebApp from './container'
 import 'normalize.css'
 import 'bulma/css/bulma.css'
+import './polyfills'
 
 const history = createHistory()
 const middleware = routerMiddleware(history)
