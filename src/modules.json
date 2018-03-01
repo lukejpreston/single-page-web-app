@@ -176,6 +176,11 @@
                 "pathname": "/counter-app",
                 "label": "Counter App",
                 "description": "The sample single page web app with exercises for you to learn how to everything comes together"
+            },
+            {
+                "pathname": "/contact-and-feeback",
+                "label": "Contact and Feedback",
+                "description": "If you wish to talk about any of the material or give feedback"
             }
         ]
     }

@@ -14,7 +14,7 @@
   "homepage": "https://single-page-web-app.js.org",
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production --config webpack.conf.js",
-    "start": "NODE_ENV=development webpack-dev-server --mode development --config webpack.conf.js --history-api-fallback",
+    "start": "NODE_ENV=development webpack-dev-server --mode development --config webpack.conf.js --history-api-fallback --quiet --open",
     "test": "jest src",
     "zip": "node src/zipper.js",
     "sitemap": "node src/sitemap.js",
