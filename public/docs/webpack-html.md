@@ -1,9 +1,25 @@
 # Templating
 
-we are going to do some simple HTML templating which requires modules (I think)
+We need to specify the index.html file, we also want to inject the javascript code and any styles but we will ifnore the styles for now as the webpack css module covers it in more details
 
-there are a load of template libraries out there and there is no perfect one. Most are very similar and it is a question of syntax or what you/your team is used to as to which you use. The default one is pretty good so we will go ahead and use that one
+we also want to develop our wesite
 
-# Dev Server
+this section is likely to change in the near future as they are currentlt modifiying the html pulgin
 
-we can spin up a dev server which will start up and when you change a file will update the browser
+```js
+module.exports = {
+    plugins: {
+        html: {}
+    }
+}
+```
+
+## Webpack Dev Server
+
+`npm i -D webpack-dev-server` then run it like you do webpack
+
+`npx webpack-dev-server --config webpack.conf.js --mode development --open`
+
+if you add `--open` it will open in a browser
+
+You can integrate webpack dev server with your server which you will see if you do the Koa work

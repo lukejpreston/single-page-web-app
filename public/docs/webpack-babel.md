@@ -1,17 +1,37 @@
-If you did the React module then you will have already used this.
+# What is Babel?
 
-# What is Babel
+Babel is a js transformer which will take your JavaScript code and turn it into... just about anything. We are going to turn out React jsx syntax and modern es6 syntax into cross browser code
 
-it is a transformer for code. It will convert your es6 code and your jsx code for you with the following
+You can run babel from a script or from the command line, but we will be using webpack
 
+## Installation
+
+```bash
+npm i -D babel babel-loader babel-present babel-react
 ```
-blah
+
+## Webpack Config
+
+then create a `.babelrc` with the following
+
+```json
+{
+    "presets": ["env", "react"]
+}
 ```
 
-# Create React App
+and in your `webpack.conf.js`
 
-All the things I have taught you are great. But someone has already done the hard work before you `create-react-app` will do all the steps up to now.
+```js
+module.exports = {
+    entry: 'src/index.js',
+    output: {
+        path: 'dist/index.js'
+    },
+    modules: {
 
-You can either leave it as it is, config free and feeling great. Or you can run `npm run eject` and then extend the application.
+    }
+}
+```
 
-For the rest of these Web Application modules we will be using `create-react-app` and for the Desktop Application and Mobile Application modules we will use it is a starting point or there may be an alternative which is similar that we use but unlikely.
+now run `npx webpack --mode development --config webpack.conf.js`

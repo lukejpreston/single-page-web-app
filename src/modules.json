@@ -24,10 +24,6 @@
                 "label": "Webpack JS"
             },
             {
-                "pathname": "/html",
-                "label": "HTML"
-            },
-            {
                 "pathname": "/webpack-html",
                 "label": "Webpack HTML"
             },
@@ -147,6 +143,10 @@
             {
                 "pathname": "/counter-app",
                 "label": "Counter App"
+            },
+            {
+                "pathname": "/html",
+                "label": "HTML"
             }
         ]
     }
