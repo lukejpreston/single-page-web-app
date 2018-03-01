@@ -38,9 +38,10 @@ const Menu = ({selectModule, selected, web, server, desktop, mobile, testing, ad
   </aside>
   <div className='is-hidden-tablet'>
     <div className='field'>
+      <label className='label' htmlFor='menu'>Menu</label>
       <div className='control'>
         <div className='select is-link is-fullwidth'>
-          <select onChange={evt => selectModule(evt.target.value)} value={selected}>
+          <select onChange={evt => selectModule(evt.target.value)} value={selected} id='menu'>
             <optgroup label={web.label} />
             {web.links.map(link => <option key={link.pathname} value={link.pathname}>{link.label}</option>)}
             <optgroup label={server.label} />
