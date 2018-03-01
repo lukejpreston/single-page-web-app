@@ -7,7 +7,7 @@ const ManifestPlugin = require('webpack-manifest-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
-  devtool: true,
+  devtool: 'source-map',
   performance: {
     hints: false
   },
