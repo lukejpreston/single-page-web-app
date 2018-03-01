@@ -20,7 +20,7 @@
     "sitemap": "node src/sitemap.js",
     "generate-pages": "node src/generate-pages.js",
     "predeploy": "npm run zip && npm run sitemap && npm run build && npm run generate-pages",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "jest": {
     "testPathIgnorePatterns": [

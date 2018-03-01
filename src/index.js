@@ -10,6 +10,7 @@ import SinglePageWebApp from './container'
 import 'normalize.css'
 import 'bulma/css/bulma.css'
 import './polyfills'
+import registerServiceWorker from './registerServiceWorker'
 
 const history = createHistory()
 const middleware = routerMiddleware(history)
@@ -31,3 +32,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
+
+registerServiceWorker()
