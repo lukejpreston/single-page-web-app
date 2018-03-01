@@ -9,63 +9,78 @@
             },
             {
                 "pathname": "/node",
-                "label": "Node"
+                "label": "Node",
+                "description": "Leverage the power of node"
             },
             {
                 "pathname": "/es6",
-                "label": "ES6"
+                "label": "ES6",
+                "description": "Modern JavaScript syntax for a modern age"
             },
             {
                 "pathname": "/eslint",
-                "label": "Eslint"
+                "label": "Eslint",
+                "description": "How to check for non complient JavaScript code"
             },
             {
                 "pathname": "/webpack-js",
-                "label": "Webpack JS"
+                "label": "Webpack JS",
+                "description": "Leverage the power of Webpack, part 1 - JavaScript"
             },
             {
                 "pathname": "/webpack-html",
-                "label": "Webpack HTML"
+                "label": "Webpack HTML",
+                "description": "Leverage the power of Webpack, part 2 - HTML"
             },
             {
                 "pathname": "/webpack-css",
-                "label": "Webpack CSS"
+                "label": "Webpack CSS",
+                "description": "Leverage the power of Webpack, part 3 - CSS"
             },
             {
                 "pathname": "/post-css",
-                "label": "Post CSS"
+                "label": "Post CSS",
+                "description": "Better CSS with PostCSS"
             },
             {
                 "pathname": "/webpack-post-css",
-                "label": "Webpack Post CSS"
+                "label": "Webpack Post CSS",
+                "description": "Leverage the power of Webpack, part 4 - Post CSS"
             },
             {
                 "pathname": "/react",
-                "label": "React"
+                "label": "React",
+                "description": "Facebook's isomorphic JavaScript library for quick, responsive client rendering"
             },
             {
                 "pathname": "/webpack-babel",
-                "label": "Webpack Babel"
+                "label": "Webpack Babel",
+                "description": "Leverage the power of Webpack, part 5 - Babel"
             },
             {
                 "pathname": "/bulma",
-                "label": "Bulma"
+                "label": "Bulma",
+                "description": "A modern CSS framework based on Flexbox"
             },
             {
                 "pathname": "/aphrodite",
-                "label": "Aphrodite"
+                "label": "Aphrodite",
+                "description": "Style processing using JavaScript"
             },
             {
                 "pathname": "/react-router",
-                "label": "React Router"
+                "label": "React Router",
+                "description": "Facebook's routing library to create a single page experience"
             },
             {
                 "pathname": "/redux",
-                "label": "Redux"
+                "label": "Redux",
+                "description": "A better way to manage your components state"
             },
             {
                 "pathname": "/react-router-redux",
-                "label": "React Router Redux"
+                "label": "React Router Redux",
+                "description": "The glue between React, React Router and Redux"
             }
         ]
     },
@@ -74,23 +89,28 @@
         "links": [
             {
                 "pathname": "/koa",
-                "label": "Koa"
+                "label": "Koa",
+                "description": "A node server"
             },
             {
                 "pathname": "/sockets",
-                "label": "SocketIO"
+                "label": "SocketIO",
+                "description": "A node websocket implementation and server"
             },
             {
                 "pathname": "/passport",
-                "label": "Passport"
+                "label": "Passport",
+                "description": "Add login security to your app"
             },
             {
                 "pathname": "/lokijs",
-                "label": "LokiJS"
+                "label": "LokiJS",
+                "description": "In-memory NoSQL database, that runs in the browser"
             },
             {
                 "pathname": "/graphql",
-                "label": "Graph QL"
+                "label": "Graph QL",
+                "description": "Making Restful API easy"
             }
         ]
     },
@@ -99,11 +119,13 @@
         "links": [
             {
                 "pathname": "/electron",
-                "label": "Electron"
+                "label": "Electron",
+                "description": "Build a desktop application using your website code"
             },
             {
                 "pathname": "/io",
-                "label": "Node IO"
+                "label": "Node IO",
+                "description": "Reading and writing to files using node"
             }
         ]
     },
@@ -112,7 +134,8 @@
         "links": [
             {
                 "pathname": "/react-native",
-                "label": "Ract Native"
+                "label": "Ract Native",
+                "description": "Build a mobile application using your website code"
             }
         ]
     },
@@ -121,15 +144,18 @@
         "links": [
             {
                 "pathname": "/jest",
-                "label": "Jest"
+                "label": "Jest",
+                "description": "Unit testing with Facebook's Jest"
             },
             {
                 "pathname": "/jest-react",
-                "label": "Jest React"
+                "label": "Jest React",
+                "description": "Unit testing React components with Facebook's Jest"
             },
             {
                 "pathname": "/nightmare",
-                "label": "Nightmare"
+                "label": "Nightmare",
+                "description": "Integration testing for your website"
             }
         ]
     },
@@ -138,15 +164,18 @@
         "links": [
             {
                 "pathname": "/vscode",
-                "label": "VSCode"
-            },
-            {
-                "pathname": "/counter-app",
-                "label": "Counter App"
+                "label": "VSCode",
+                "description": "IDE for your all your coding needs"
             },
             {
                 "pathname": "/html",
-                "label": "HTML"
+                "label": "HTML",
+                "description": "A rant and rave abour HTML semantics and selector naming conventions"
+            },
+            {
+                "pathname": "/counter-app",
+                "label": "Counter App",
+                "description": "The sample single page web app with exercises for you to learn how to everything comes together"
             }
         ]
     }
