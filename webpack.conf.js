@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
 
 module.exports = {
   performance: {
@@ -55,6 +56,10 @@ module.exports = {
       template: './src/index.html'
     }),
     new ExtractTextPlugin({filename: 'main.css'}),
-    new CopyWebpackPlugin([{from: './public'}])
+    new CopyWebpackPlugin([{from: './public'}]),
+    new ManifestPlugin({
+      fileName: 'asset-manifest.json',
+      publicPath: '/'
+    })
   ]
 }
