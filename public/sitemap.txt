@@ -3,7 +3,6 @@ https://single-page-web-app.js.org//node
 https://single-page-web-app.js.org//es6
 https://single-page-web-app.js.org//eslint
 https://single-page-web-app.js.org//webpack-js
-https://single-page-web-app.js.org//html
 https://single-page-web-app.js.org//webpack-html
 https://single-page-web-app.js.org//webpack-css
 https://single-page-web-app.js.org//post-css
@@ -28,3 +27,4 @@ https://single-page-web-app.js.org//jest-react
 https://single-page-web-app.js.org//nightmare
 https://single-page-web-app.js.org//vscode
 https://single-page-web-app.js.org//counter-app
+https://single-page-web-app.js.org//html
