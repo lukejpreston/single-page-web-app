@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
     }
   },
   'chatButton-active': {
-    marginBottom: 0
+    marginBottom: 0,
+    marginRight: '31%'
   },
   chatTitan: {
     float: 'right',

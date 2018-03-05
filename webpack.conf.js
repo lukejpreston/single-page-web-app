@@ -8,6 +8,9 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
   devtool: 'source-map',
+  output: {
+    publicPath: '/'
+  },
   performance: {
     hints: false
   },
