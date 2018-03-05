@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Hero from './hero'
 import Menu from './menu'
 import Content from './content'
+import Chat from './chat'
+import styles from './styles'
 
 class SinglePageWebApp extends Component {
   markdown () {
@@ -21,9 +23,10 @@ class SinglePageWebApp extends Component {
       </header>
       <main>
         <section className='section'>
+          <Chat active={this.props.chat} toggleChat={this.props.toggleChat} />
           <div className='container'>
             <div className='columns'>
-              <div className='column is-3'>
+              <div className={`column is-3 ${styles.menu()}`}>
                 <Menu {...this.props.menu} selectModule={this.props.selectModule} selected={this.props.selected} />
               </div>
               <div className='column'>

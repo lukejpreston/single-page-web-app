@@ -13,6 +13,7 @@ const locationChange = '@@router/LOCATION_CHANGE'
 const fetchingMarkdown = '@@spwa/FETCHING'
 const fetchedMarkdown = '@@spwa/FETCHED'
 const fetchedErrorMarkdown = '@@spwa/FETCHED_ERROR'
+const toggleChat = '@@spwa/TOGGLE_CHAT'
 
 const getTitle = pathname => {
   let title = ''
@@ -80,6 +81,7 @@ const spwa = (state, action) => {
   state.menu = state.menu || clone(modules)
   state.title = state.title || ''
   state.content = state.content || clone(defaultContent)
+  state.chat = state.chat || 'inactive'
 
   if (action.type === locationChange) {
     let pathname = action.payload.pathname
@@ -98,6 +100,8 @@ const spwa = (state, action) => {
   if (action.type === fetchingMarkdown) state.content.status = 'fetching'
   if (action.type === fetchedMarkdown) state.content.status = 'fetched'
   if (action.type === fetchedErrorMarkdown) state.content.status = 'fetched-error'
+
+  if (action.type === toggleChat) state.chat = state.chat === 'active' ? 'inactive' : 'active'
 
   return state
 }

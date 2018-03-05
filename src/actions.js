@@ -34,6 +34,11 @@ export default (dispatch, {match, location, history}) => {
     },
     selectModule: (pathname) => {
       history.push(pathname)
+    },
+    toggleChat: () => {
+      dispatch({
+        type: '@@spwa/TOGGLE_CHAT'
+      })
     }
   }
 }
