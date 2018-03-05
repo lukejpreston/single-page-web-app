@@ -46,7 +46,10 @@ SinglePageWebApp.propTypes = {
   selected: PropTypes.string.isRequired,
   content: PropTypes.object.isRequired,
   fetchMarkdown: PropTypes.func.isRequired,
-  selectModule: PropTypes.func.isRequired
+  selectModule: PropTypes.func.isRequired,
+  chat: PropTypes.string.isRequired,
+  toggleChat: PropTypes.func.isRequired
+
 }
 
 export default SinglePageWebApp

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './styles'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import {faComments, faTimes} from '@fortawesome/fontawesome-free-solid'
@@ -13,5 +14,10 @@ const Chat = ({toggleChat, active}) => <div className={styles.chat()}>
     </button>
   </div>
 </div>
+
+Chat.propTypes = {
+  toggleChat: PropTypes.func.isRequired,
+  active: PropTypes.string.isRequired
+}
 
 export default Chat
