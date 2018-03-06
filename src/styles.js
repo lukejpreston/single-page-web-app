@@ -54,20 +54,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#E74C3C',
     ':hover': {
       backgroundColor: '#D54C3C'
-    }
+    },
+    transition: 'margin 0.3s'
   },
   'chatButton-active': {
+    fontSize: 13,
     marginBottom: 0,
     marginRight: '31%'
   },
   chatTitan: {
+    transition: 'width 0.3s',
     float: 'right',
     margin: 10,
-    width: '30%',
-    display: 'none'
+    width: '0%'
   },
   'chatTitan-active': {
-    display: 'block'
+    width: '30%'
   }
 })
 
